@@ -1,0 +1,9 @@
+<table>
+	<% for(var i=0; i<rows; i++){%>
+		<tr>
+			<% for(var j=0; j<cols; j++) {%>
+				<td id="<%= cols*i+j%>" class="iniimg"><img class="coverSquare" src="icons/tile.ico" width="35px" height="35px"/></td>
+			<% } %>
+		</tr>
+	<% } %>
+</table>

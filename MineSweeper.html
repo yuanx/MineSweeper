@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mine Sweeper</title>
+		<meta charset="UTF8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="ejs_0.9_alpha_1_production.js"></script>	
+
+		<script>
+			$(document).ready(function(){
+				var html = new EJS({url:'mytemplate.ejs'}).render({rows: 9, cols: 9});
+				$('#container').html(html);
+			});
+		</script>
+		<script src="MineSweeper.js"></script>		
+		<style>
+			body{
+				text-align: center;
+			}
+
+			table{
+				background-color:#ccc;
+				border-right:1px solid #6F6C6F;
+				border-bottom:1px solid #6F6C6F;
+				margin:0 auto;
+			}
+			tr, td, img{
+				padding:0;
+				margin:-2px -3px -9px -2px;
+			}
+			
+			td{
+				text-align:center;
+				border-collapse: collapse;
+				border-left: 1px solid #6F6C6F;
+				border-top: 1px solid #6F6C6F;
+				min-width:30px;
+				height:31px;
+			}
+			
+			
+			.e1{
+				color:blue;
+			}			
+			.e2{
+				color:green;
+			}			
+			.e3{
+				color:red;
+			}
+			.e4{
+				color:#003366;
+			}
+			.e5{
+				color:black;
+			}
+			.e6{
+				color:#FF00FF;
+			}
+			.e7{
+				color:#660066;
+			}
+			.e8{
+				color:#9E9A9E;
+			}
+			#ShowMineNum{
+				color: red;
+			}
+			.win{
+				color: green;
+			}
+			.lost{
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>Mine Sweeper</h1>
+		<div id="container"></div>
+		<p> Remain Mines: <span id='ShowMineNum'></span></p>
+		<h3 id='result'></h3>
+	</body>			
+</html>
